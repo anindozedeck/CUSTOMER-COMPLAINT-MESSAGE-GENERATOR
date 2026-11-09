@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f4ef">
+    <title>ReplyWell — Thoughtful replies, made simple</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="ReplyWell home">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span>replywell</span>
+        </a>
+        <span class="topbar-note">Customer care, made easier</span>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow"><span aria-hidden="true">✳</span> FOR NAIROBI'S SMALL BUSINESSES</p>
+        <h1 id="page-title">Turn a complaint<br>into a <em>conversation.</em></h1>
+        <p class="intro">A thoughtful response can make all the difference. Paste a customer complaint and get a calm, professional reply draft in seconds.</p>
+
+        <form id="reply-form" class="reply-form">
+          <label for="complaint">What did your customer say?</label>
+          <textarea id="complaint" name="complaint" maxlength="4000" placeholder="Paste their message here..." required></textarea>
+          <div class="form-footer">
+            <span class="helper">Your draft will acknowledge the issue and suggest a clear next step.</span>
+            <span id="char-count" class="char-count" aria-live="polite">0 / 4,000</span>
+          </div>
+          <button id="generate-button" type="submit">
+            <span id="button-label">Generate reply</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+          <p class="privacy-note">Complaint text is sent to Anthropic to generate your draft. Avoid including payment details or other sensitive information.</p>
+        </form>
+
+        <section id="result" class="result" aria-live="polite" aria-labelledby="result-title" hidden>
+          <div class="result-heading">
+            <div>
+              <p class="eyebrow">YOUR DRAFT</p>
+              <h2 id="result-title">Ready to make it yours</h2>
+            </div>
+            <button id="copy-button" class="copy-button" type="button">Copy reply</button>
+          </div>
+          <p id="reply-text" class="reply-text"></p>
+          <p class="review-note">A good starting point. Review and personalize before sending.</p>
+        </section>
+        <p id="error-message" class="error-message" role="alert" hidden></p>
+      </section>
+
+      <footer class="footer">
+        <span>Made for the moments that matter.</span>
+        <span>Thoughtful service starts with listening.</span>
+      </footer>
+    </main>
+  </body>
+</html>

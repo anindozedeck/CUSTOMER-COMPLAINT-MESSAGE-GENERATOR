@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: replywell
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn Day20_exercise:app --bind 0.0.0.0:$PORT
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: ANTHROPIC_API_KEY
+        sync: false
