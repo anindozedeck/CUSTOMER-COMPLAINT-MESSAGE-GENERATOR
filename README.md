@@ -1,6 +1,6 @@
 # ReplyWell
 
-**Live URL:** Pending deployment to Render.
+**Live URL:** https://replywell.onrender.com
 
 ReplyWell helps small Nairobi businesses respond to customer complaints with care. Paste a complaint from a shop, courier, Airbnb, or restaurant customer and select **Generate reply** to get a professional draft that acknowledges the issue and suggests a clear next step. It avoids blame and unsupported promises. Review and personalize the draft before sending.
 
